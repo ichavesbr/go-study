@@ -1,0 +1,23 @@
+Via brew (install, version, update)
+
+1. brew install go
+2. brew upgrade go
+3. go version
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+"go.mod" file:
+
+1. Defines the module (the app itself, with all its packages)
+2. Registers external dependencies and versions
+3. Creates the base module path ("github.com/username/repository-name")
+
+go mod init github.com/username/repository-name
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+"go mod tidy" command:
+
+1. Adds modules used in the project
+2. Removes modules no longer used
+3. Keeps go.mod in sync with the code's imports
+4. Creates/updates go.sum
