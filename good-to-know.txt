@@ -21,3 +21,9 @@ go mod init github.com/username/repository-name
 2. Removes modules no longer used
 3. Keeps go.mod in sync with the code's imports
 4. Creates/updates go.sum
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+"go test" command:
+
+1. test files with _test.go
+2. "go test -v" shows more details (verbose)
