@@ -15,6 +15,15 @@ Via brew (install, version, update)
 go mod init github.com/username/repository-name
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
+"go mod edit -replace" command:
+
+1. Turns the module local.
+2. Must be executed inside the main directory/folder.
+
+go mod edit -replace github.com/username/repository-name=../repository-name
+go mod tidy
+------------------------------------------------------------------------
+------------------------------------------------------------------------
 "go mod tidy" command:
 
 1. Adds modules used in the project
