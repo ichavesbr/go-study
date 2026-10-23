@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"example.com/encodeJSON"
 	"example.com/greetings"
 )
 
@@ -20,4 +21,7 @@ func main() {
 	}
 
 	fmt.Println(message)
+
+	msgAbc := encodeJSON.EncodeJsonData()
+	fmt.Println(msgAbc)
 }
