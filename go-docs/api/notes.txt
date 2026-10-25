@@ -1,0 +1,17 @@
+Normalmente guarda dados em banco de dados,
+mas para facilitar o projeto será guardado na memória.
+Dados guardado em memória se perdem ao fechar o servidor.
+
+
+Projeto:
+  Vintage Jazz records - API (Gin)
+
+2 endpoints:
+  /albums (GET, POST)
+  /albums/:id (GET)
+
+
+
+
+"gin.Context":
+  carrega detalhes do request, valida e encodifica JSON etc.
