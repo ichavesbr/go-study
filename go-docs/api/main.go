@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -32,7 +31,7 @@ func main() {
 	router.Run("localhost:8081")
 }
 
-// getAlbums responds with the list of all albums as JSON.
+// transforma os dados em json e envia ele com status 200
 func getAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 }
@@ -40,16 +39,15 @@ func getAlbums(c *gin.Context) {
 // postAlbums adds an album from JSON received in the request body.
 func postAlbums(c *gin.Context) {
 	var newAlbum album
-	fmt.Println(newAlbum)
 
-	// Call BindJSON to bind the received JSON to newAlbum.
+	// Le o json que o user enviar e converte para GO
 	if err := c.BindJSON(&newAlbum); err != nil {
 		return
 	}
 
 	// Add the new album to the slice.
 	albums = append(albums, newAlbum)
-	c.IndentedJSON(http.StatusCreated, newAlbum)
+	c.IndentedJSON(http.StatusCreated, newAlbum) //transforma em json + envia status
 }
 
 // getAlbumByID locates the album whose ID value matches the id parameter sent by the client, then returns that album as a response.

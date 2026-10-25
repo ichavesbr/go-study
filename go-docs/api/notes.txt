@@ -15,3 +15,11 @@ Projeto:
 
 "gin.Context":
   carrega detalhes do request, valida e encodifica JSON etc.
+
+ENVIAR RESPONSE (HTTP - API)
+serialize, marshal(go), encode(go), render/rendering(gin)
+struct GO -> JSON
+
+RECEBER REQUEST (HTTP - API)
+deserialize, unmarshal(go), decode(go), bind/binding(gin)
+JSON -> struct GO
