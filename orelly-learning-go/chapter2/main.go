@@ -12,7 +12,7 @@ const (
 
 func Main() {
 	fmt.Println("=================")
-	fmt.Println("MODULE: chapter 2")
+	fmt.Println("MODULE: chapter 2\n")
 	const y = "Hello"
 
 	fmt.Println(x, y, z)

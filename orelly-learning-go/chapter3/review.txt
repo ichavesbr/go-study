@@ -1,0 +1,21 @@
+É obrigatório colocar tamanho em arrays.
+  var x = [...]int{10, 20, 30}    // array literal (tamanho omitido)
+  var x = [3]int{10, 20, 30}      // array literal
+  var x = [3]int{}                // ARRAY "vazio" (zerado): [0 0 0]
+  var x [3]int                    // array zerado [0 0 0]
+
+Não se define tamanho em slices.
+  var x = []int{10, 20, 30}       // slice literal
+  var x = []int{}                 // slice vazio
+  var x []int                     // slice nil
+
+Slice aumenta a capacidade automaticamente com "append". Geralmente dobra.
+RecomendáveBom criar com capacidade definida. (Cria-se com "make".)
+
+Criar um novo slice a partir de outro compartilha a mesma memória.
+Se alterar um, altera o outro. Evitar usar apend porque vira uma zona.
+
+Usar copy é a solução para isso (acima).
+  novoSlice := copy(x, y)
+    x-> para onde vai copiar
+    y-> da onde vai copiar
